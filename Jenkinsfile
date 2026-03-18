@@ -24,7 +24,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Hello, Jenkins!'
+                echo 'Hello, build!'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Hi, test!'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Hey, Deploy!'
             }
         }
     }
