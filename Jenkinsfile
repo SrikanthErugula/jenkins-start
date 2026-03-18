@@ -1,7 +1,34 @@
 // this is skelton syntax 
  
+// pipeline {
+//     agent any
+
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 echo 'Hello, build!'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo "Hi, test!"
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Hey, Deploy!'
+//             }
+//         }
+//     }
+// }
+
 pipeline {
-    agent any
+    agent agent {
+        node {
+            label 'AGENT-1'
+
+        }
+    }
 
     stages {
         stage('Build') {
