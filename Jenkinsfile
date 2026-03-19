@@ -4,12 +4,16 @@ pipeline {
             label 'AGENT-1'
         }
     }
+    environment{
+        COURSE = "Jenkins with DEVOPS"
+    }
     stages {
         stage('Build') {
             steps {
                 script{
                     sh """
                         echo 'Hello, Building!'
+                        echo $COURSE
                     """
                 }
                 
@@ -20,6 +24,7 @@ pipeline {
                 script{
                     sh """
                         echo 'Hello, Testing !'
+                        echo $COURSE
                     """
                 }
             }
