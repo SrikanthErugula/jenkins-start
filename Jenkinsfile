@@ -20,7 +20,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
- // this build section 
+ // this build section main code is here
     stages {
         stage('Build') {
             steps {
