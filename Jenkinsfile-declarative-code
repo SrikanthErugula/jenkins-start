@@ -8,7 +8,7 @@ pipeline
     stages {
         stage('Build')                 {
             steps {
-                echo 'Hello, build!'
+                echo 'Hello, builddddddddddddddddddd!'
                           }
         }
         stage('Test') {
@@ -18,7 +18,7 @@ pipeline
                    }
         stage('Deploy') {
             steps {
-                echo 'Hey, Deploy!'
+                echo 'Hey, Deployddddddddddddddddddd!'
             }
                  }
                                              }
