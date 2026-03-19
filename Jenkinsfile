@@ -20,7 +20,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-
+ // this build section 
     stages {
         stage('Build') {
             steps {
@@ -36,7 +36,7 @@ pipeline {
                         echo "Toggle: ${params.DEPLOY}"
                         echo "Choice: ${params.CHOICE}"
                         echo "Password: ${params.PASSWORD}"
-                        
+
                     """
                 }
                 
