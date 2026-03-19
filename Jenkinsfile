@@ -8,7 +8,9 @@ pipeline {
         COURSE = "Jenkins with DEVOPS"
     }
     options{
-        timeout(time: 10, unit: 'SECONDS')
+        timeout(time: 10, unit: 'MINUTES')
+        disableConcurrentBuilds()
+
     }
     stages {
         stage('Build') {
@@ -17,7 +19,7 @@ pipeline {
                     sh """
                         echo 'Hello, Building!'
                         echo $COURSE
-                        sleep 10
+                        // sleep 10
                         env
                     """
                 }
