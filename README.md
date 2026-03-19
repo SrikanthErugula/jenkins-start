@@ -27,7 +27,7 @@ sudo systemctl enable jenkins
 ```
 
 #### Plugins:
-* Stage view
+* Available tab --> Stage view
 
 #### Master Agent Architecture
 * Create credentials to connect agent

@@ -23,13 +23,11 @@
 // }
 
 pipeline {
-    agent agent {
+    agent {
         node {
             label 'AGENT-1'
-
         }
     }
-
     stages {
         stage('Build') {
             steps {
@@ -45,6 +43,12 @@ pipeline {
             steps {
                 echo 'Hey, Deploy!'
             }
+        }
+    }
+    post{
+        always{
+            echo 'I will always say Hello again!'
+            cleanWs()
         }
     }
 }
