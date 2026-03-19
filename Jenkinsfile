@@ -14,6 +14,7 @@ pipeline {
                     sh """
                         echo 'Hello, Building!'
                         echo $COURSE
+                        env
                     """
                 }
                 
@@ -34,6 +35,7 @@ pipeline {
                 script{
                     sh """
                         echo 'Hello, Deploying!'
+                        env
                     """
                 }
             }
