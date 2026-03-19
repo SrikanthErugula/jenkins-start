@@ -1,3 +1,27 @@
+// this is skelton syntax 
+ 
+// pipeline {
+//     agent any
+
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 echo 'Hello, build!'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo "Hi, test!"
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Hey, Deploy!'
+//             }
+//         }
+//     }
+// }
+
 pipeline {
     agent {
         node {
@@ -7,30 +31,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script{
-                    sh """
-                        echo 'Hello, Building!'
-                    """
-                }
-                
+                echo 'Hello, build!'
             }
         }
         stage('Test') {
             steps {
-                script{
-                    sh """
-                        echo 'Hello, Testing !'
-                    """
-                }
+                echo "Hi, test!"
             }
         }
         stage('Deploy') {
             steps {
-                script{
-                    sh """
-                        echo 'Hello, Deploying!'
-                    """
-                }
+                echo 'Hey, Deploy!'
             }
         }
     }
@@ -50,3 +61,4 @@ pipeline {
 //         }
     }
 }
+
